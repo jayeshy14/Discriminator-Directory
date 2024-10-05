@@ -1,10 +1,15 @@
-// src/components/QueryDiscriminators.tsx
 import { useState } from 'react';
 import axios from 'axios';
 
+interface Discriminator {
+  value: string;
+  instruction: string;
+  user_id: string;
+}
+
 const QueryDiscriminators = () => {
   const [programId, setProgramId] = useState('');
-  const [discriminators, setDiscriminators] = useState<string[]>([]);
+  const [discriminators, setDiscriminators] = useState<Discriminator[]>([]);
 
   const handleQuery = async () => {
     try {
@@ -26,14 +31,21 @@ const QueryDiscriminators = () => {
       />
       <button onClick={handleQuery} className="bg-blue-500 text-white px-4 py-2 rounded mt-4">
         Query Discriminators
-      </button>{discriminators.length>0?      <ul className="mt-4">
-        {discriminators.map((disc, index) => (
-          <li key={index} className="border-b p-2">{disc}</li>
-        ))}
-      </ul>:
-      <p>No discriminators</p>
-      }
+      </button>
 
+      {discriminators.length > 0 ? (
+        <ul className="mt-4">
+          {discriminators.map((disc, index) => (
+            <li key={index} className="border-b p-2">
+              <p><strong>Discriminator Value:</strong> {disc.value}</p>
+              <p><strong>Instruction:</strong> {disc.instruction}</p>
+              <p><strong>User ID:</strong> {disc.user_id}</p>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No discriminators found</p>
+      )}
     </div>
   );
 };
