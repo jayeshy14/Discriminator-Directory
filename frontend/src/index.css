@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+body {
+  background-color: #111827; /* gray-900 */
+  color: #f9fafb; /* gray-50 */
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Dark mode scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937; /* gray-800 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #374151; /* gray-700 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4b5563; /* gray-600 */
+}
+
+/* Focus ring styles for dark mode */
+.focus-ring-dark {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
+}
+
+/* Utility classes for dark mode */
+.card-dark {
+  @apply bg-gray-800 border border-gray-700 rounded-lg shadow-md;
+}
+
+.input-dark {
+  @apply bg-gray-800 border border-gray-700 text-white focus:border-blue-500 focus:ring-blue-500;
+}
+
+.table-dark {
+  @apply bg-gray-800 border-gray-700;
+}
+
+.table-row-dark-even {
+  @apply bg-gray-800 hover:bg-gray-700;
+}
+
+.table-row-dark-odd {
+  @apply bg-gray-900 hover:bg-gray-700;
+}

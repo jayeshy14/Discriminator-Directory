@@ -1,0 +1,89 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Dark Mode Component Styles */
+
+/* Card styling */
+.card-dark {
+  @apply bg-gray-800 rounded-lg shadow-md p-6 mb-6 border border-gray-700;
+}
+
+/* Form controls */
+.input-dark {
+  @apply border border-gray-600 bg-gray-800 p-3 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none w-full text-white;
+}
+
+.label-dark {
+  @apply block text-sm font-medium text-gray-300 mb-2;
+}
+
+.hint-dark {
+  @apply text-xs text-gray-400 mt-1;
+}
+
+/* Buttons */
+.btn-primary-dark {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition duration-200 ease-in-out shadow-sm disabled:bg-blue-800 disabled:cursor-not-allowed;
+}
+
+/* Table styles */
+.table-dark {
+  @apply bg-gray-800 rounded-lg border border-gray-700 overflow-hidden;
+}
+
+.table-row-dark-even {
+  @apply bg-gray-800 hover:bg-gray-700;
+}
+
+.table-row-dark-odd {
+  @apply bg-gray-900 hover:bg-gray-700;
+}
+
+/* Status badges */
+.badge-success-dark {
+  @apply bg-green-900/50 text-green-300 py-1 px-2 rounded-full text-xs font-medium;
+}
+
+.badge-neutral-dark {
+  @apply bg-gray-700 text-gray-300 py-1 px-2 rounded-full text-xs font-medium;
+}
